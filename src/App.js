@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import "./App.css";
+
+import { scoresUrl, scoresOptions } from "./Api";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    const getScores = async (url, options) => {
+      await fetch(url, options)
+        .then((resp) => resp.text())
+        .then((html) => {
+          console.log("UPDATE SCORES")
+          document.querySelector(".App").innerHTML = html;
+        })
+        .catch((err) => console.error(err));
+    };
+
+    getScores(scoresUrl, scoresOptions)
+
+    const interval = setInterval(() => {getScores(scoresUrl, scoresOptions)}, 30000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <div className="App"></div>;
 }
 
 export default App;
