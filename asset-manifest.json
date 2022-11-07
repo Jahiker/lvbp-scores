@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lvbp-scores/static/css/main.fc9792e3.css",
+    "main.js": "/lvbp-scores/static/js/main.96f87c21.js",
+    "index.html": "/lvbp-scores/index.html",
+    "main.fc9792e3.css.map": "/lvbp-scores/static/css/main.fc9792e3.css.map",
+    "main.96f87c21.js.map": "/lvbp-scores/static/js/main.96f87c21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc9792e3.css",
+    "static/js/main.96f87c21.js"
+  ]
+}

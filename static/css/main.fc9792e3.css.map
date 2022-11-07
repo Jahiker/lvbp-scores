@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.fc9792e3.css","mappings":"AAAA,KAGE,wBAAyB,CACzB,UAAY,CAFZ,qCAAyC,CADzC,QAIF,CCLA,KACE,iBACF","sources":["index.css","App.css"],"sourcesContent":["body {\n  margin: 0;\n  font-family: 'Stick No Bills', sans-serif;\n  background-color: #282c34;\n  color: white;\n}\n",".App {\n  text-align: center;\n}\n"],"names":[],"sourceRoot":""}
